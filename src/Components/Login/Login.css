@@ -12,9 +12,20 @@
     left: 50%;
     transform: translate(-50%, -50%);
     background: white;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 700;
+}
+#slogan-wrapper{
+    height: auto;
+    margin: 0 auto;
+    width: 30vw;
+    font-size: 20px;
+    /* border: 1px solid black; */
 }
 #logo{
     font-family: 'Grand Hotel', cursive;
     font-size: 80px;
-    line-height: 10px;
+    line-height: 0px;
+    font-weight: 500;
+    /* border: 1px solid pink; */
 }
