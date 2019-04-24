@@ -13,3 +13,8 @@
     transform: translate(-50%, -50%);
     background: white;
 }
+#logo{
+    font-family: 'Grand Hotel', cursive;
+    font-size: 80px;
+    line-height: 10px;
+}

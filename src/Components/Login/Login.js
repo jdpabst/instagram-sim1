@@ -30,6 +30,7 @@ class Login extends Component{
                     <div id="logo">
                         <p>Instagram</p>
                     </div>
+                    <p>Sign up to see photos and videos of your friends!</p>
                     <div id="login-creds">
                         < Credentials />
                     </div>
