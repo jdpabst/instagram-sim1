@@ -12,7 +12,6 @@
     left: 50%;
     transform: translate(-50%, -50%);
     background: white;
-    font-family: 'Times New Roman', Times, serif;
     font-weight: 700;
 }
 #slogan-wrapper{
@@ -20,6 +19,7 @@
     margin: 0 auto;
     width: 30vw;
     font-size: 20px;
+    color: darkgray
     /* border: 1px solid black; */
 }
 #logo{

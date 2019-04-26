@@ -13,12 +13,12 @@ class Credentials extends Component{
                     <div className='bar'></div>
                 </div>
                 
-                <div id='login-inputs'>
+                <div id='login-inputs' className='inputs'>
                     <input className='username' value='Username' />
                     <input className='password' value='Password' />
                 </div>
 
-                <button>Login</button>
+                <button id='login-bttn' className='bttn'> Login</button>
 
                 <div id='login-bars'>
                     <div className='bar'></div>
@@ -26,15 +26,15 @@ class Credentials extends Component{
                     <div className='bar'></div>
                 </div>
 
-                <div id='sign-up-inputs'>
+                <div id='sign-up-inputs' className='inputs'>
                     <input className="username" value='Mobile Number or Email' />
                     <input className='password' value='Full Name' />
                     <input className='password' value='Username' />
                     <input className='password' value='Password' />
                     <input className='' value='Verify Password' />
                 </div>
-                
-                <button>Sign Up</button>
+
+                <button id='sign-up-bttn' className='bttn'>Sign Up</button>
             </div>
         )
     }
