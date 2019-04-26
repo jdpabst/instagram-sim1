@@ -5,15 +5,26 @@ import './Credentials.css'
 class Credentials extends Component{
     render(){
         return(
-            <div id="credentails-wrapper">
-                <p> Login </p>
+            <div id="credentials-wrapper">
+
+                <div id='login-bars'>
+                    <div className='bar'></div>
+                    <p> Login </p>
+                    <div className='bar'></div>
+                </div>
+                
                 <div id='login-inputs'>
                     <input className='username' value='Username' />
                     <input className='password' value='Password' />
                 </div>
+
                 <button>Login</button>
 
-                <p> OR </p>
+                <div id='login-bars'>
+                    <div className='bar'></div>
+                    <p> OR </p>
+                    <div className='bar'></div>
+                </div>
 
                 <div id='sign-up-inputs'>
                     <input className="username" value='Mobile Number or Email' />
@@ -22,6 +33,7 @@ class Credentials extends Component{
                     <input className='password' value='Password' />
                     <input className='' value='Verify Password' />
                 </div>
+                
                 <button>Sign Up</button>
             </div>
         )
