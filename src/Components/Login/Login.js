@@ -11,7 +11,8 @@ class Login extends Component{
             username: '',
             password: '',
             fullName: '',
-            contactInfo: ''
+            contactInfo: '',
+            passwordVerify: ''
         }
     }
 
