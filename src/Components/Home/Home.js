@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import ImageUploader from 'react-images-upload';
 import './Home.css'
 
 class Home extends Component{

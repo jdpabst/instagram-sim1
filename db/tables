@@ -1,0 +1,14 @@
+create table user (
+id int not null primary key,
+first_name varchar(255) NOT NULL,
+last_name varchar(255),
+contact_info varchar(255),
+);
+
+CREATE TABLE post (
+    ID int NOT NULL PRIMARY KEY,
+    Img varchar(255) NOT NULL,
+    Post_text varchar(255),
+);
+
+
