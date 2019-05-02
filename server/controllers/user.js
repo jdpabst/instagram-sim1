@@ -9,12 +9,25 @@ function addUser(req, res){
 
 // add the user into the database -> res = the new user added
     return db.users.insert({phone_num, full_name, email, password})
-       .then((res) => {
-           console.log(res)
-          res.status(200).send(res)
+
+    // the response in the .then() should be unique to what you are getting back so the system can distinguish between the "res" in the parent function and the response in the inner function, in this case, we are going to be getting a user back. //
+       .then((user) => {
+           console.log(user)
+          res.status(200).send(user)
        })
 }
 
+function fetchUser(req, res){
+    let db = req.app.get('db');
+    let { email, password } = req.body;
+
+    return db.users.findOne({email: email} && {password: password})
+        .then((user) => {
+            res.status(200).send(user);
+        })
+}
+
 module.exports = {
-    addUser
+    addUser,
+    fetchUser
 }

@@ -1,8 +1,48 @@
 import React, { Component } from 'react';
+import axios from 'axios';
 
 import './Credentials.css'
 
 class Credentials extends Component{
+    constructor(props){
+        super(props);
+
+        this.state = {
+            mobile_num: '',
+            full_name: '',
+            email: '',
+            password: '',
+            verify_password: '',
+        }
+        this.handleLoginEmail = this.handleLoginEmail.bind(this);
+        this.handleLoginPassword = this.handleLoginPassword.bind(this);
+        this.loginUser = this.loginUser.bind(this);
+    }
+
+    handleLoginEmail(e){
+        this.setState({
+            email: e.target.value
+        })
+    }
+    handleLoginPassword(e){
+        this.setState({
+            password: e.target.value
+        })
+    }
+
+    loginUser(){
+        console.log(`Logging in ${this.state.username} with password: ${this.state.password}`)
+        axios.get('/api/user/login')
+            .then((res) => {
+                console.log(res.data);
+                this.setState({
+                    email: '',
+                    password: ''
+                })
+            })
+        
+    }
+
     render(){
         return(
             <div id="credentials-wrapper">
@@ -14,11 +54,11 @@ class Credentials extends Component{
                 </div>
                 
                 <div id='login-inputs' className='inputs'>
-                    <input className='username' value='Email' />
-                    <input className='password' value='Password' />
+                    <input onChange={ this.handleLoginEmail }  className='username' placeholder='Email' />
+                    <input onChange={ this.handleLoginPassword } className='password' placeholder='Password' />
                 </div>
 
-                <button id='login-bttn' className='bttn'> Login</button>
+                <button onClick={ this.loginUser } id='login-bttn' className='bttn'> Login</button>
 
                 <div id='login-bars'>
                     <div className='bar'></div>
@@ -27,11 +67,11 @@ class Credentials extends Component{
                 </div>
 
                 <div id='sign-up-inputs' className='inputs'>
-                    <input className="username" value='Mobile Number' />
-                    <input className='password' value='Full Name' />
-                    <input className='password' value='Email' />
-                    <input className='password' value='Password' />
-                    <input className='' value='Verify Password' />
+                    <input className="username" placeholder='Mobile Number' />
+                    <input className='password' placeholder='Full Name' />
+                    <input className='password' placeholder='Email' />
+                    <input className='password' placeholder='Password' />
+                    <input className='' placeholder='Verify Password' />
                 </div>
 
                 <button id='sign-up-bttn' className='bttn'>Sign Up</button>
