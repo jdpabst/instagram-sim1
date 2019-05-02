@@ -14,8 +14,12 @@ massive(config.massiveConnection)
     app.set('db', db);
   })
 
+// taking the function I create in the user contoller and hooking it to an api end point
+const userController = require("./controllers/user")
+app.post('/api/createUser', userController.addUser);
 
-const port = 3000;
+
+const port = 8080;
 app.listen(port, () => {
     console.log(`listening on port ${port}`)
 })
