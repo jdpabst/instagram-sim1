@@ -31,14 +31,10 @@ class Credentials extends Component{
     }
 
     loginUser(){
-        console.log(`Logging in ${this.state.username} with password: ${this.state.password}`)
+        console.log(`Logging in ${this.state.email} with password: ${this.state.password}`)
         axios.get('/api/user/login')
             .then((res) => {
                 console.log(res.data);
-                this.setState({
-                    email: '',
-                    password: ''
-                })
             })
         
     }
@@ -54,8 +50,8 @@ class Credentials extends Component{
                 </div>
                 
                 <div id='login-inputs' className='inputs'>
-                    <input onChange={ this.handleLoginEmail }  className='username' placeholder='Email' />
-                    <input onChange={ this.handleLoginPassword } className='password' placeholder='Password' />
+                    <input onChange={ this.handleLoginEmail }  className='username' type='text' placeholder='Email' />
+                    <input onChange={ this.handleLoginPassword } className='password' type='text' placeholder='Password' />
                 </div>
 
                 <button onClick={ this.loginUser } id='login-bttn' className='bttn'> Login</button>
