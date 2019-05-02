@@ -14,7 +14,7 @@ class Credentials extends Component{
                 </div>
                 
                 <div id='login-inputs' className='inputs'>
-                    <input className='username' value='Username' />
+                    <input className='username' value='Email' />
                     <input className='password' value='Password' />
                 </div>
 
@@ -27,9 +27,9 @@ class Credentials extends Component{
                 </div>
 
                 <div id='sign-up-inputs' className='inputs'>
-                    <input className="username" value='Mobile Number or Email' />
+                    <input className="username" value='Mobile Number' />
                     <input className='password' value='Full Name' />
-                    <input className='password' value='Username' />
+                    <input className='password' value='Email' />
                     <input className='password' value='Password' />
                     <input className='' value='Verify Password' />
                 </div>

@@ -1,9 +1,11 @@
-create table user (
-id int not null primary key,
-first_name varchar(255) NOT NULL,
-last_name varchar(255),
-contact_info varchar(255),
+create table users(
+    id int primary key,
+    phone_num varchar(255),
+    full_name varchar(255),
+    email varchar(255),
+    password varchar(255)
 );
+
 
 CREATE TABLE post (
     ID int NOT NULL PRIMARY KEY,
@@ -11,4 +13,12 @@ CREATE TABLE post (
     Post_text varchar(255),
 );
 
+
+
+ ADDED USERS FOR TESTING
+insert into users (phone_num, full_name, email, password)
+    values ('111-222-3333', 'JD Pab', 'test1@gmail.com', '1')
+
+insert into users (phone_num, full_name, email, password)
+    values ('112-223-3334', 'LC Pab', 'test2@gmail.com', '2')
 
