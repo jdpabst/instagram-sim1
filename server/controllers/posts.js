@@ -3,6 +3,7 @@ const app = require('../index');
 function fillFeed(req, res){
     console.log('fillFeed hit')
     let db = req.app.get('db');
+    console.log(req.app.get('db'));
 
     // const {img, post_desc} = req.body;
 

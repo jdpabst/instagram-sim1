@@ -6,7 +6,7 @@
 }
 
 #header{
-    position: absolute;
+    position: fixed;
     top: 0;
     width: 100vw;
     height: 70px;
@@ -80,4 +80,21 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
+}
+
+#home-feed-wrapper{
+    background: white;
+    border: 1px solid #e2e2e2;
+    height: auto;
+    width: 90%;
+    position: relative;
+    top: 100px;
+    margin: 0 auto;
+}
+
+@media (min-width: 1250px){
+    #home-feed-wrapper{
+        width: 1000px;
+    }
+    
 }

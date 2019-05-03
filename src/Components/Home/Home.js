@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
+import Feed from '../Feed/Feed';
 import './Home.css'
+
 
 class Home extends Component{
     render(){
@@ -28,9 +30,9 @@ class Home extends Component{
                     </div>
                 </div>
 
-                {/* <div id='home-feed-wrapper'>
-                
-                </div> */}
+                <div id='home-feed-wrapper'>
+                    < Feed />
+                </div>
                 {/* will map through the items given to us from the database to fill the feed here. Should just create a new component for each. */}
             </div>
         )
