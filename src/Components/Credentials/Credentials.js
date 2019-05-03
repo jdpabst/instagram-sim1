@@ -32,11 +32,11 @@ class Credentials extends Component{
 
     loginUser(){
         console.log(`Logging in ${this.state.email} with password: ${this.state.password}`)
-        axios.get('/api/user/login')
+        axios.post('/api/user/login', {email: this.state.email, password: this.state.password})
             .then((res) => {
+                console.log('hello')
                 console.log(res.data);
             })
-        
     }
 
     render(){

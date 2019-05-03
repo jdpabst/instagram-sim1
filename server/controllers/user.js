@@ -20,9 +20,10 @@ function addUser(req, res){
 function fetchUser(req, res){
     let db = req.app.get('db');
     let { email, password } = req.body;
-
-    return db.users.findOne({email: email} && {password: password})
+    console.log(email)
+    return db.users.findOne({email: email, password: password})
         .then((user) => {
+            console.log(user);
             res.status(200).send(user);
         })
 }

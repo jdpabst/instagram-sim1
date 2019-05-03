@@ -7,11 +7,11 @@ create table users(
 );
 
 
-CREATE TABLE post (
-    ID int NOT NULL PRIMARY KEY,
-    Img varchar(255) NOT NULL,
-    Post_text varchar(255),
-);
+create table post(
+    id serial PRIMARY KEY,
+    img varchar(255),
+    post_desc varchar(255)
+)
 
 
 

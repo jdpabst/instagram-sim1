@@ -18,7 +18,10 @@ massive(config.massiveConnection)
 // taking the function I create in the user contoller and hooking it to an api end point
 const userController = require("./controllers/user")
 app.post('/api/user/create', userController.addUser);
-app.get('/api/user/login', userController.fetchUser);
+app.post('/api/user/login', userController.fetchUser);
+
+const postController = require("./controllers/posts")
+app.get('/api/posts', postController.fillFeed)
 
 
 const port = 8000;
