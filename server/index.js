@@ -22,7 +22,7 @@ app.post('/api/user/login', userController.fetchUser);
 
 const postController = require("./controllers/posts")
 app.get('/api/posts', postController.fillFeed)
-
+app.post('/api/posts/add', postController.addPost)
 
 const port = 8000;
 app.listen(port, () => {

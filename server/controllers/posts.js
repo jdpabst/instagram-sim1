@@ -16,6 +16,18 @@ function fillFeed(req, res){
 
 }
 
+function addPost(req, res){
+    let db = req.app.get('db');
+    return db.post.insert({
+        img: req.body.img,
+        post_desc: req.body.post_desc
+        // user: req.body.user
+    }).then( post => {
+        res.status(200).send(post);
+    })
+}
+
 module.exports = {
-   fillFeed
+   fillFeed,
+   addPost
 }
